@@ -1,4 +1,4 @@
-# 🧬 In Silico Restriction Cloning Stimulator
+# 🧬 In Silico Restriction Cloning Simulator
 > **Simulate restriction enzyme cloning digitally without stepping into a lab.**
 
 ![Python](https://img.shields.io/badge/python-3.10.11-blue)
