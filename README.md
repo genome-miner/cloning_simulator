@@ -228,7 +228,7 @@ Biotechnologist and Bioinformatician
 
 ## License
 
-[MIT License]() is free to use, modify, and distribute with attribution.
+[MIT License](https://github.com/genome-miner/cloning_simulator/blob/main/LICENSE) is free to use, modify, and distribute with attribution.
 
 ---
 
