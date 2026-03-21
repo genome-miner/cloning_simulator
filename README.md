@@ -126,16 +126,11 @@ plasmid[0] + site + DNA + site + plasmid[1]
 
 ## Sample Output
 
-> **Input:** E. coli genomic sequence + pUC19c plasmid + EcoRI
+> **Example Input:** E. coli genomic sequence + pUC19c plasmid + EcoRI
 
-| Result | Value |
-|--------|-------|
-| Insert DNA Length | 3075 bp |
-| Plasmid Length | 2686 bp |
-| Recombinant Plasmid Length | 5767 bp |
-| Restriction Enzyme | EcoRI |
-| Recognition Site | GAATTC |
-| Cloning Status | Successful ✅ |
+<p align="center">
+  <img src="https://github.com/genome-miner/cloning_simulator/blob/main/Cloning_result.png?raw=true" alt="Alt text" width="500">
+</p>
 
 ---
 
