@@ -203,8 +203,6 @@ python main.py
 | Feature | Description |
 |---------|-------------|
 | 🌐 NCBI Integration | Fetch sequences via Accession Numbers using Entrez API |
-| 🔀 Double Digestion | Support two enzymes simultaneously |
-| 📊 Gel Visualization | Simulate agarose gel electrophoresis |
 | 💾 Export Results | Save recombinant sequence as FASTA file |
 | 🗺 Plasmid Map | Visual circular plasmid map showing insert position |
 
