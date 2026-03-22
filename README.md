@@ -216,7 +216,7 @@ python main.py
 Biotechnologist and Bioinformatician
 - 🎓 [University of Veterinary and Animal Sciences](https://www.uvas.edu.pk/)
 - 📧 [Email](sanaazizsial@gmail.com)
-- 🐙 [GitHub URL](https://github.com/genome-miner)
+- 🐙 [GitHub](https://github.com/genome-miner)
 - 🔗 [LinkedIn](in/sana-aziz-sial-73b189265)
 
 ---
