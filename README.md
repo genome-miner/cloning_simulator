@@ -72,7 +72,9 @@ restriction-cloning-simulator/
 │   ├── frame()              # Results inner frame
 │   ├── results()            # Display cloning results
 │   └── button_creation()    # Submit button
-│
+│   ├── open_gel_window()    # Opens virtual gel visualization window
+│   ├── visual_simulation()  # Adds 'View Virtual Gel' button to results
+│   └── canva()              # Creates black canvas for gel bands
 ├── main.py                  # Entry point
 └── README.md                # Project documentation
 ```
@@ -120,6 +122,14 @@ plasmid[0] + site + DNA + site + plasmid[1]
         │
         ▼
 [ Display Results ]
+        │
+        ▼
+[ View Virtual Gel Button ]
+        │
+        ▼
+[ Opens New Window ]
+Band positions calculated by sequence length
+Plasmid vs Recombinant Plasmid compared
 ```
 
 ---
@@ -169,6 +179,8 @@ This application uses **Biopython's built-in restriction enzyme database** (`Bio
 5. **Real-time Search**: StringVar + trace_add for live filtering
 6. **GUI Development**: Tkinter grid, frames, Text widgets, Listbox
 7. **Exception Handling**: Multi-level validation and error management
+8. **Multi-window GUI**: Toplevel window management in Tkinter
+9. **Visual Band Simulation**: Canvas-based gel electrophoresis visualization
 
 ---
 
