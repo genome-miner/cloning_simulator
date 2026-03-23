@@ -337,8 +337,14 @@ class Cloning():
         reference = max_value * 1.2
         y_plasmid = 350 - ((self.plasmid_length/reference) * 350)
         y_cloned_plasmid = 350 - ((self.cloned_plasmid/reference) * 350)
+        
+        # Rectangle
         self.canvas.create_rectangle(62, y_plasmid, 112, y_plasmid + 10, fill='#50C878')
         self.canvas.create_rectangle(237, y_cloned_plasmid, 287, y_cloned_plasmid + 10, fill='#50C878')
+        
+        # Text
+        self.canvas.create_text(87, y_plasmid - 15, text='Plasmid', fill='#ffffff')
+        self.canvas.create_text(262, y_cloned_plasmid - 15, text='Recombinant', fill='#ffffff')
     
     def visual_simulation(self):
         button = tk.Button(
