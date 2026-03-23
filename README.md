@@ -54,29 +54,30 @@ Built entirely in Python using Object-Oriented Programming and [Biopython](https
 ```
 restriction-cloning-simulator/
 │
-├── cloning_simulator.py     # Core application class (OOP)
-│   ├── __init__()           # Window & screen configuration
-│   ├── window()             # App title widget
-│   ├── DNA_label()          # DNA input label
-│   ├── DNA_text_label()     # DNA FASTA text box
-│   ├── plasmid_label()      # Plasmid input label
-│   ├── plasmid_text_label() # Plasmid sequence text box
-│   ├── restriction()        # Load all enzymes from Biopython
-│   ├── enzyme_label()       # Enzyme input label
-│   ├── text_entry()         # Enzyme search entry with StringVar
-│   ├── listbox()            # Enzyme search results listbox
-│   ├── filter_enzymes()     # Real-time enzyme filtering
-│   ├── clean_sequence()     # FASTA header removal & formatting
-│   ├── cloning_work()       # Core cloning simulation logic
-│   ├── container()          # Results container frame
-│   ├── frame()              # Results inner frame
-│   ├── results()            # Display cloning results
-│   └── button_creation()    # Submit button
-│   ├── open_gel_window()    # Opens virtual gel visualization window
-│   ├── visual_simulation()  # Adds 'View Virtual Gel' button to results
-│   └── canva()              # Creates black canvas for gel bands
-├── main.py                  # Entry point
-└── README.md                # Project documentation
+├── cloning_simulator.py      # Core application class (OOP)
+│   ├── __init__()            # Window & screen configuration
+│   ├── window()              # App title widget
+│   ├── DNA_label()           # DNA input label
+│   ├── DNA_text_label()      # DNA FASTA text box
+│   ├── plasmid_label()       # Plasmid input label
+│   ├── plasmid_text_label()  # Plasmid sequence text box
+│   ├── restriction()         # Load all enzymes from Biopython
+│   ├── enzyme_label()        # Enzyme input label
+│   ├── text_entry()          # Enzyme search entry with StringVar
+│   ├── listbox()             # Enzyme search results listbox
+│   ├── filter_enzymes()      # Real-time enzyme filtering
+│   ├── clean_sequence()      # FASTA header removal & formatting
+│   ├── cloning_work()        # Core cloning simulation logic
+│   ├── container()           # Results container frame
+│   ├── frame()               # Results inner frame
+│   ├── results()             # Display cloning results
+│   ├── button_creation()     # Submit button
+│   ├── open_gel_window()     # Opens virtual gel visualization window
+│   ├── visual_simulation()   # Adds 'View Virtual Gel' button to results
+│   └── canva()               # Creates black canvas for gel bands
+│
+├── main.py                   # Entry point
+└── README.md                 # Project documentation
 ```
 
 ---
