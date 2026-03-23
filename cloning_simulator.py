@@ -181,22 +181,27 @@ class Cloning():
         self.container()
         self.frame()
         self.results()
+        self.visual_simulation()
     
     def container(self):
         self.container_frame = tk.Frame(self.screen, bg='#E8F4F0') 
-        self.container_frame.grid(row=7, column=0, columnspan=2, pady=20)
+        self.container_frame.grid(row=7, column=0, columnspan=2, pady=10)
             
         self.container_frame.grid_columnconfigure(0, weight=1)
         self.container_frame.grid_columnconfigure(1, weight=1)
         
     def frame(self):
-        self.inner_frame = tk.Frame(self.container_frame, bg='#E8F4F0')
-        self.inner_frame.grid(row=1, column=0, columnspan=2, sticky='n', pady=10)
+        self.inner_frame = tk.Frame(
+            self.container_frame,
+            bg='#E8F4F0',
+            highlightthickness = 2,
+            highlightbackground = '#1B3A6B')
+        self.inner_frame.grid(row=1, column=0, columnspan=2, sticky='n', pady=5)
         
     def results(self):
         DNA_length = len(self.DNA.strip())
-        plasmid_length = len(self.plasmid.strip())
-        cloned_plasmid = len(self.new_plasmid)
+        self.plasmid_length = len(self.plasmid.strip())
+        self.cloned_plasmid = len(self.new_plasmid)
         cutting_enzyme = self.restriction_enzyme.strip()
         recognition_site = self.enzyme_site
         cloning_result = 'Successful'
@@ -230,7 +235,7 @@ class Cloning():
         
         plasmid_label = tk.Label(
             self.inner_frame,
-            text = f'{plasmid_length}',
+            text = f'{self.plasmid_length}',
             fg='#1a5c38',
             bg = '#E8F4F0',
             font = ('Georgia', '10', 'bold'))
@@ -248,7 +253,7 @@ class Cloning():
         
         recombinant_plasmid = tk.Label(
             self.inner_frame,
-            text = f'{cloned_plasmid}',
+            text = f'{self.cloned_plasmid}',
             fg='#1a5c38',
             bg = '#E8F4F0',
             font = ('Georgia', '10', 'bold'))
@@ -309,6 +314,52 @@ class Cloning():
                             
         cloning_label.grid(row = 6, column = 1, padx = 15, pady = 10)
     
+    def open_gel_window(self):
+        self.gel_screen = tk.Toplevel(self.screen)
+        self.gel_screen.title('Virtual Gel Visualization')    
+        self.gel_screen.geometry('500x500')
+        self.gel_screen.config(bg = '#F5F0E8')
+        self.gel_screen.grid_columnconfigure(0, weight=1)
+        self.gel_screen.grid_columnconfigure(1, weight=1)
+        
+        new_window_label = tk.Label(
+            self.gel_screen,
+            bg = '#F5F0E8',
+            fg = '#1B3A6B',
+            text = 'Virtual Gel Visualization',
+            font = ('Georgia', '20', 'bold'))
+        
+        new_window_label.grid(row = 0, column = 0, columnspan=2, pady = 30)
+        
+        self.canva()
+        
+        max_value = max(self.plasmid_length, self.cloned_plasmid)
+        reference = max_value * 1.2
+        y_plasmid = 350 - ((self.plasmid_length/reference) * 350)
+        y_cloned_plasmid = 350 - ((self.cloned_plasmid/reference) * 350)
+        self.canvas.create_rectangle(62, y_plasmid, 112, y_plasmid + 10, fill='#50C878')
+        self.canvas.create_rectangle(237, y_cloned_plasmid, 287, y_cloned_plasmid + 10, fill='#50C878')
+    
+    def visual_simulation(self):
+        button = tk.Button(
+        self.inner_frame,
+        text = 'View Virtual Gel',
+        bg = '#1B3A6B',
+        fg = '#FFFFFF',
+        command = self.open_gel_window,
+        font = ('Georgia', '10', 'bold'))
+        
+        button.grid(row = 7, column = 0, columnspan=2, pady = 30)
+        
+    def canva(self):
+        self.canvas = tk.Canvas(
+            self.gel_screen,
+            width = 350,
+            height = 350,
+            highlightthickness = 0,
+            bg = '#000000')
+        self.canvas.grid(row = 1, column =0, columnspan=2, pady = 30)
+    
     def button_creation(self):
         button = tk.Button(
             self.screen,
@@ -331,4 +382,3 @@ class Cloning():
         self.listbox()
         self.button_creation()
         self.screen.mainloop()
-    
