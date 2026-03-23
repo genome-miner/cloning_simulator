@@ -139,7 +139,12 @@ Plasmid vs Recombinant Plasmid compared
 > **Example Input:** E. coli genomic sequence + pUC19c plasmid + EcoRI
 
 <p align="center">
-  <img src="?raw=true" alt="Alt text" width="500">
+  <img src="https://github.com/genome-miner/cloning_simulator/blob/main/Cloning_result.png?raw=true" alt="Alt text" width="500">
+</p>
+
+
+<p align="center">
+  <img src="https://github.com/genome-miner/cloning_simulator/blob/main/Virtual_gel_visualization.png?raw=true" alt="Alt text" width="500">
 </p>
 
 ---
